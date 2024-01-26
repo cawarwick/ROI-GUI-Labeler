@@ -4,8 +4,8 @@ ImageJ Macro for helping the manual labeling of ROIs. This is intended to be use
 Each plane will need to be done seperatelu, so pick a plane to evaluate (e.g. P0), make a substack of the relevant planes (e.g. if your ROIs for P0 span from slice 5-40, you can estimate +/- 20 from the mean).
 
 For the reference stack I usually will put the CellPose image at the top and bottom of the Z-stack so that you can see the functional image 1st, e.g. concatenate it to the start and the end of your structural image.
-![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/e16b68ee-ed3d-465a-b663-e1f612bb2fd7)
 
+![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/e16b68ee-ed3d-465a-b663-e1f612bb2fd7)
 
 
 Operating instructions:
