@@ -18,5 +18,10 @@ Have your ROIs loaded into imageJ and your reference structural Z-stack already 
 Run the macro and evaluate. I usually find that the structural and the functional ROIs rarely line up 1:1 due to warping during the K30, so look for the similar shape rather than the exact XY coordinates.
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/5aae1d92-b25b-4016-9f4e-5cced2482b34)
 
+If your cell doesn't show up in the Max Activity projection as in the example below either due to a low S:N such as in the example below
 
+![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/3964e38f-5919-4867-ac69-3132ada6b900)
+
+Use other cells as landmarks to find the 'right' Z-plane. Even includign +/-3 zstacks of Z-drift the red nucleus should be visible so if there is no nucelus assume it's excitatory.
+![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/ad5dbfa6-16c7-4356-bf74-f1b08a57ec9f)
 
