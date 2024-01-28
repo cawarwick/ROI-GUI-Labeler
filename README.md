@@ -1,7 +1,7 @@
 # ROI-GUI-Labeler
 ImageJ Macro for helping the manual labeling of ROIs. This is intended to be used to manually evaluate whether a cell has nuclear mCherry or not. 
 
-Each plane will need to be done seperatelu, so pick a plane to evaluate (e.g. P0), make a substack of the relevant planes (e.g. if your ROIs for P0 span from slice 5-40, you can estimate +/- 20 from the mean).
+Each plane will need to be done seperately, so pick a plane to evaluate (e.g. P0), make a substack of the relevant planes (e.g. if your ROIs for P0 span from slice 5-40, you can estimate +/- 20 from the mean).
 
 For the reference stack I usually will put the CellPose image at the top and bottom of the Z-stack so that you can see the functional image 1st, e.g. concatenate it to the start and the end of your structural image.
 
@@ -11,6 +11,11 @@ For the reference stack I usually will put the CellPose image at the top and bot
 Operating instructions:
 Change the directory to where you want it to save the ref images and the results
 ParentD="Y:/DRGS project/P0/"; //where to save the files and the results
+AllROIOverlays=1 //set to 1 to include all ROIs or only the 1 of interest
+SizeOfFOV=35 //this is in pixels +/- the center of the ROI
+xd=1150; //coordinate of the Dialog in X pixel on screen, adjust as necessary or preferred
+yd=1110; //coordinate of the Dialog in Y pixel on screen\
+Mag=7; //adjust to set the amount of zoom
 
 Have your ROIs loaded into imageJ and your reference structural Z-stack already open.
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/504505b4-8ada-4d27-a0c0-9d324b18031d)
