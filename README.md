@@ -22,6 +22,6 @@ If your cell doesn't show up in the Max Activity projection or during the K30 st
 
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/3964e38f-5919-4867-ac69-3132ada6b900)
 
-Use other cells as landmarks to find the 'right' Z-plane. Even includign +/-3 zstacks of Z-drift the red nucleus should be visible so if there is no nucelus assume it's excitatory.
+Use other cells as landmarks to find the right range of Z-plane, e.g. find the cell that lines with the any ROI at the highest and lowest Z-plane and then search within that range. Even including +/-3 zstacks of Z-drift the red nucleus should be visible so if there is no nucelus assume it's excitatory.
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/ad5dbfa6-16c7-4356-bf74-f1b08a57ec9f)
 
