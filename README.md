@@ -13,15 +13,6 @@ Operating instructions:
 Change the directory to where you want it to save the ref images and the results
 ParentD="Y:/DRGS project/P0/"; //where to save the files and the results
 
-AllROIOverlays=1 //set to 1 to include all ROIs or only the 1 of interest
-
-SizeOfFOV=35 //this is in pixels +/- the center of the ROI
-
-xd=1150; //coordinate of the Dialog in X pixel on screen, adjust as necessary or preferred
-
-yd=1110; //coordinate of the Dialog in Y pixel on screen
-
-Mag=7; //adjust to set the amount of zoom
 
 Have your ROIs loaded into imageJ and your reference structural Z-stack already open.
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/504505b4-8ada-4d27-a0c0-9d324b18031d)
@@ -34,5 +25,18 @@ If your cell doesn't show up in the Max Activity projection or during the K30 st
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/3964e38f-5919-4867-ac69-3132ada6b900)
 
 Use other cells as landmarks to find the right range of Z-plane, e.g. find the cell that lines with the any ROI at the highest and lowest Z-plane and then search within that range. Even including +/-3 zstacks of Z-drift the red nucleus should be visible so if there is no nucelus assume it's excitatory.
+
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/ad5dbfa6-16c7-4356-bf74-f1b08a57ec9f)
 
+
+Variaibles you can change if desired, but default is fine
+
+AllROIOverlays=1 //set to 1 to include all ROIs or only the 1 of interest
+
+SizeOfFOV=35 //this is in pixels +/- the center of the ROI
+
+xd=1150; //coordinate of the Dialog in X pixel on screen, adjust as necessary or preferred
+
+yd=1110; //coordinate of the Dialog in Y pixel on screen
+
+Mag=7; //adjust to set the amount of zoom
