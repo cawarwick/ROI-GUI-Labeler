@@ -11,10 +11,15 @@ For the reference stack I usually will put the CellPose image at the top and bot
 Operating instructions:
 Change the directory to where you want it to save the ref images and the results
 ParentD="Y:/DRGS project/P0/"; //where to save the files and the results
+
 AllROIOverlays=1 //set to 1 to include all ROIs or only the 1 of interest
+
 SizeOfFOV=35 //this is in pixels +/- the center of the ROI
+
 xd=1150; //coordinate of the Dialog in X pixel on screen, adjust as necessary or preferred
-yd=1110; //coordinate of the Dialog in Y pixel on screen\
+
+yd=1110; //coordinate of the Dialog in Y pixel on screen
+
 Mag=7; //adjust to set the amount of zoom
 
 Have your ROIs loaded into imageJ and your reference structural Z-stack already open.
