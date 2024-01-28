@@ -1,6 +1,7 @@
 ParentD="Y:/DRGS project/#505 12-18-23/SDH Recording/Final FOV/Functional/Splits/suite2p V2/Structural Image/Red/P1/"; //where to save the files
-AllROIOverlays=1 //set to 1 to include all ROIs or only the 1 of interest
-SizeOfFOV=35 //this is in pixels +/- the center of the ROI
+Retest=1; //if you want to re-review ROIs at the end
+AllROIOverlays=1; //set to 1 to include all ROIs or only the 1 of interest
+SizeOfFOV=35; //this is in pixels +/- the center of the ROI
 xd=1150; //coordinate of the Dialog in X pixel on screen, adjust as necessary or preferred
 yd=1110; //coordinate of the Dialog in Y pixel on screen\
 Mag=7; //adjust to set the amount of zoom
@@ -63,7 +64,6 @@ while (i<ROI) {
 	Dialog.addString("0=Clear, 1=Red, 2=?", "0");
 	Dialog.setLocation(xd, yd)
 	Dialog.show();
-	print("test");
 	lbl = Dialog.getString();
 	print(lbl);
 	Table.set("Binary", i, lbl);
@@ -94,6 +94,58 @@ while (i<ROI) {
 	
 	i=i+1;
 }
-	
+
+if (Retest==1) {
+	waitForUser("Starting Retest");
+	list=getFileList(DirB);
+	print("Retest ",list.length, " Files");
+	for (i=0; i<list.length; i++) {
+		file=list[i];
+		npath=DirB+file;
+		print("Retest of",npath);
+		open(npath);
+		File.delete(npath);
+		Filename=getInfo("window.title");
+		print("Filename", Filename);
+		endoffile=indexOf(Filename, ".");
+		ROINum=substring(Filename, 3,endoffile);
+		ROINum=parseInt(ROINum);
+		print("ROINumber", ROINum);
+		setLocation(850, 200);
+		for (z = 0; z < Mag; z++) {
+			run("In [+]");
+			}
+		setSlice(1);
+		Dialog.createNonBlocking("Nuclear mCherry or Not?");
+		Dialog.addString("0=Clear, 1=Red, 2=?", "0");
+		Dialog.setLocation(xd, yd)
+		Dialog.show();
+		lbl = Dialog.getString();
+		print(lbl);
+		TableNum=ROINum-1;
+		print("put new label in row", TableNum);
+		Table.set("Binary", (TableNum), lbl);
+		if (lbl==0) {
+			Table.set("Label", TableNum, "Exc");
+			SaveD=DirC+Filename;
+			saveAs("Tiff", SaveD);
+			close();
+		}
+		else {
+			if (lbl==1){
+			Table.set("Label", TableNum, "Inh");
+			SaveD=DirR+Filename;
+			saveAs("Tiff", SaveD);
+			close();
+		}
+			else {
+				Table.set("Label", TableNum, "?");
+				SaveD=DirB+Filename;
+				saveAs("Tiff", SaveD);
+				close();
+				}
+		}	
+	}
+}
 Results=ParentD + "Labeled.csv";
 saveAs("Results", Results);
