@@ -28,6 +28,8 @@ Use other cells as landmarks to find the right range of Z-plane, e.g. find the c
 
 ![image](https://github.com/cawarwick/ROI-GUI-Labeler/assets/81972652/ad5dbfa6-16c7-4356-bf74-f1b08a57ec9f)
 
+Example of intended useage
+https://youtu.be/iI1-M3u2FjM
 
 Variaibles you can change if desired, but default is fine
 
